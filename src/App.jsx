@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { About } from "./pages/About";
+import { Introduction } from "./pages/Introduction";
+import { Section1 } from "./pages/Section1";
+import { Summary } from "./pages/Summary";
 import { AppProvider } from "./AppContext";
 
 import "./index.css";
@@ -10,10 +11,10 @@ function App() {
         <>
             <AppProvider>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/" element={<Introduction />} />
+                    <Route path="/section1" element={<Section1 />} />
+                    <Route path="/summary" element={<Summary />} />
                 </Routes>
-                <h1 className="text-base">test</h1>
             </AppProvider>
         </>
     );

@@ -1,0 +1,25 @@
+{
+    "pages": [
+        {
+            "route": "/",
+            "s1_h1": "E-Learning Course",
+            "s1_p1": "Welcome to the course!",
+            "s1_b1": "Start Section 1"
+        },
+        {
+            "route": "/section1",
+            "s1_h1": "Section 1",
+            "s1_p1": "This is section 1. Click on one of the buttons below.",
+            "s1_b1": "Visit Summary",
+            "s1_b2": "Return to Section 1"
+        },
+        {
+            "route": "/summary",
+            "s1_h1": "Well Done!",
+            "s1_p1": "You have completed the course.",
+            "s1_b1": "Return to Section 1",
+            "s1_b2": "Restart Course"
+        }
+    ]
+}
+

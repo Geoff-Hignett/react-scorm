@@ -1,0 +1,25 @@
+{
+    "pages": [
+        {
+            "route": "/",
+            "s1_h1": "Cours d'apprentissage en ligne",
+            "s1_p1": "Bienvenue au cours!",
+            "s1_b1": "Commencer la partie 1"
+        },
+        {
+            "route": "/section1",
+            "s1_h1": "Section 1",
+            "s1_p1": "Ceci est la section 1. Cliquez sur l'un des boutons ci-dessous.",
+            "s1_b1": "Résumé de la visite",
+            "s1_b2": "Retour à la section 1"
+        },
+        {
+            "route": "/summary",
+            "s1_h1": "Bien joué!",
+            "s1_p1": "You have completed the course",
+            "s1_b1": "Retour à la section 1",
+            "s1_b2": "Vous avez terminé le cours."
+        }
+    ]
+}
+

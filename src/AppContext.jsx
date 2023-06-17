@@ -1,25 +1,15 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
+import EN from "./language/en.json";
+import FR from "./language/fr.json";
 
 export const AppContext = createContext();
 
 export function AppProvider({ children }) {
-    console.log("sldkfj");
+    // set course language
+    const activeLang = FR;
+
     return (
-        <AppContext.Provider
-            value={{
-                data: {
-                    language: {
-                        routes: [
-                            {
-                                route: "/",
-                                h1: "E-Learning Course",
-                                p1: "Welcome to the e-learning course",
-                            },
-                        ],
-                    },
-                },
-            }}
-        >
+        <AppContext.Provider value={{ lang: activeLang }}>
             {children}
         </AppContext.Provider>
     );
