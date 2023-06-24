@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import { AppContext } from "../AppContext";
+import ScormFunctions from "../scorm/ScormFunctions";
 
 export function Introduction() {
     const { lang } = useContext(AppContext);
@@ -8,7 +9,7 @@ export function Introduction() {
     const i18n_ap = lang.pages[pageID];
 
     useEffect(() => {
-        // console.log(i18n_ap);
+        console.log(i18n_ap);
     }, []);
 
     return (
@@ -22,6 +23,7 @@ export function Introduction() {
                     {i18n_ap.s1_b1}
                 </button>
             </Link>
+            <ScormFunctions />
         </div>
     );
 }

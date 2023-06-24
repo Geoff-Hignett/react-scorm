@@ -6,7 +6,7 @@ export const AppContext = createContext();
 
 export function AppProvider({ children }) {
     // set course language
-    const activeLang = FR;
+    const activeLang = EN;
 
     return (
         <AppContext.Provider value={{ lang: activeLang }}>

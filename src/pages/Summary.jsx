@@ -22,7 +22,7 @@ export function Summary() {
                     {i18n_ap.s1_b1}
                 </button>
             </Link>
-            <Link to="/">
+            <Link to="/introduction">
                 <button className="bg-sky-500 text-white text-lg p-2 rounded cursor-pointer">
                     {i18n_ap.s1_b2}
                 </button>

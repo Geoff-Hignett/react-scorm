@@ -1,26 +1,31 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { AppProvider } from "./AppContext";
+import ScormProvider from "./scorm/ScormProvider";
 import { Introduction } from "./pages/Introduction";
 import { Section1 } from "./pages/Section1";
 import { Summary } from "./pages/Summary";
-import { AppProvider } from "./AppContext";
-import { Learner } from "./scorm/Learner";
-import ScormProvider from "./scorm/index";
-import ApiStatus from "./scorm/ApiStatus";
-
 import "./index.css";
 
 function App() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        navigate("/introduction");
+    }, []);
+
     return (
         <>
             <ScormProvider>
                 <AppProvider>
                     <Routes>
-                        <Route path="/" element={<Introduction />} />
+                        <Route
+                            path="/introduction"
+                            element={<Introduction />}
+                        />
                         <Route path="/section1" element={<Section1 />} />
                         <Route path="/summary" element={<Summary />} />
                     </Routes>
-                    <Learner />
-                    <ApiStatus />
                 </AppProvider>
             </ScormProvider>
         </>
