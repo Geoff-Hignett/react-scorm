@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import { AppContext } from "../AppContext";
 
-export function Section1() {
+const Section1 = () => {
     const { lang } = useContext(AppContext);
     const pageID = 1;
     const i18n_ap = lang.pages[pageID];
@@ -24,4 +24,6 @@ export function Section1() {
             </Link>
         </div>
     );
-}
+};
+
+export default Section1;

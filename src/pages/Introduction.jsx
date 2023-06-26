@@ -3,7 +3,7 @@ import { useEffect, useContext } from "react";
 import { AppContext } from "../AppContext";
 import ScormFunctions from "../scorm/ScormFunctions";
 
-export function Introduction() {
+const Introduction = () => {
     const { lang } = useContext(AppContext);
     const pageID = 0;
     const i18n_ap = lang.pages[pageID];
@@ -26,4 +26,6 @@ export function Introduction() {
             <ScormFunctions />
         </div>
     );
-}
+};
+
+export default Introduction;

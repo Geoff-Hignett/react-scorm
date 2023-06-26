@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import { AppContext } from "../AppContext";
 
-export function Summary() {
+const Summary = () => {
     const { lang } = useContext(AppContext);
     const pageID = 2;
     const i18n_ap = lang.pages[pageID];
@@ -29,4 +29,6 @@ export function Summary() {
             </Link>
         </div>
     );
-}
+};
+
+export default Summary;
