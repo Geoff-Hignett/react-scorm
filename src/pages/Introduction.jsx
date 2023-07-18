@@ -2,14 +2,19 @@ import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import { AppContext } from "../AppContext";
 import ScormFunctions from "../scorm/ScormFunctions";
+import LangController from "../language/LangController";
+import serverLang from "../language/LangController";
 
 const Introduction = () => {
     const { lang } = useContext(AppContext);
     const pageID = 0;
-    const i18n_ap = lang.pages[pageID];
+    let i18n_ap = lang.pages[pageID];
+    console.log(serverLang);
+    console.log(lang);
 
     useEffect(() => {
-        console.log(i18n_ap);
+        // console.log(profile);
+        // console.log(i18n_ap);
     }, []);
 
     return (
@@ -24,6 +29,7 @@ const Introduction = () => {
                 </button>
             </Link>
             <ScormFunctions />
+            <LangController />
         </div>
     );
 };

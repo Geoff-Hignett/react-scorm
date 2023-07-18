@@ -24,10 +24,7 @@ function App() {
             <ScormProvider>
                 <AppProvider>
                     <Routes>
-                        <Route
-                            path="/introduction"
-                            element={<Introduction />}
-                        />
+                        <Route path="/introduction" element={<Introduction />}/>
                         <Route path="/section1" element={<Section1 />} />
                         <Route path="/summary" element={<Summary />} />
                     </Routes>

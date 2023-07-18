@@ -13,7 +13,6 @@ export function AppProvider({ children }) {
             value={{
                 lang: activeLang,
                 projectID: "74c7579e-ed5e-4da0-905f-8e9a503e09e1",
-                editToolEnabled: true,
             }}
         >
             {children}
