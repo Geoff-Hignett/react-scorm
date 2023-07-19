@@ -6,16 +6,21 @@ import LangController from "../language/LangController";
 import serverLang from "../language/LangController";
 
 const Introduction = () => {
-    const { lang } = useContext(AppContext);
+    const { localLang, serverLang, loading, count, friends } =
+        useContext(AppContext);
     const pageID = 0;
-    let i18n_ap = lang.pages[pageID];
-    console.log(serverLang);
-    console.log(lang);
-
+    let i18n_ap = localLang.pages[pageID];
     useEffect(() => {
-        // console.log(profile);
-        // console.log(i18n_ap);
-    }, []);
+        console.log(serverLang);
+        console.log(serverLang[pageID]);
+        if (serverLang.length) {
+            console.log("server lang has length");
+            i18n_ap = serverLang[pageID];
+        }
+        console.log(i18n_ap);
+        console.log(friends);
+        console.log(serverLang.length);
+    }, [loading]);
 
     return (
         <div className="container mx-auto">
@@ -29,7 +34,11 @@ const Introduction = () => {
                 </button>
             </Link>
             <ScormFunctions />
-            <LangController />
+            <p>{loading ? "loading" : "not loading"}</p>
+            <p>{count}</p>
+            <p>{friends.length}</p>
+            <p>{serverLang.length}</p>
+            {/* <LangController /> */}
         </div>
     );
 };
