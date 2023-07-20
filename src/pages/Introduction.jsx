@@ -1,26 +1,11 @@
 import { Link } from "react-router-dom";
-import { useEffect, useContext } from "react";
-import { AppContext } from "../AppContext";
 import ScormFunctions from "../scorm/ScormFunctions";
-import LangController from "../language/LangController";
-import serverLang from "../language/LangController";
+import { useLangContext } from "../context/LangContext";
 
 const Introduction = () => {
-    const { localLang, serverLang, loading, count, friends } =
-        useContext(AppContext);
+    const { pages } = useLangContext();
     const pageID = 0;
-    let i18n_ap = localLang.pages[pageID];
-    useEffect(() => {
-        console.log(serverLang);
-        console.log(serverLang[pageID]);
-        if (serverLang.length) {
-            console.log("server lang has length");
-            i18n_ap = serverLang[pageID];
-        }
-        console.log(i18n_ap);
-        console.log(friends);
-        console.log(serverLang.length);
-    }, [loading]);
+    const i18n_ap = pages[pageID];
 
     return (
         <div className="container mx-auto">
@@ -34,11 +19,7 @@ const Introduction = () => {
                 </button>
             </Link>
             <ScormFunctions />
-            <p>{loading ? "loading" : "not loading"}</p>
-            <p>{count}</p>
-            <p>{friends.length}</p>
-            <p>{serverLang.length}</p>
-            {/* <LangController /> */}
+            <img src="/img/vite.svg" alt="" />
         </div>
     );
 };

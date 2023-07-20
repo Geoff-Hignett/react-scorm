@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../styles/Edit.module.css";
+import styles from "./Edit.module.scss";
 
 const Edit = () => {
     const [enabled, setEnabled] = useState(true);

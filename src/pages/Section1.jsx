@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
-import { AppContext } from "../AppContext";
+// import { AppContext } from "../AppContext";
 
 const Section1 = () => {
     const { lang } = useContext(AppContext);
