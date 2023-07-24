@@ -1,3 +1,6 @@
+// import abstracts
+@use "./scss/abstracts/breakpoints" as *;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

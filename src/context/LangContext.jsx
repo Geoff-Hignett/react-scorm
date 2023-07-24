@@ -7,7 +7,7 @@ const LangContext = createContext();
 function LangContextProvider({ children }) {
     // Initialize state with local lang
     const [pages, setPages] = useState(EN.pages);
-    const [langServer, setlangServer] = useState(false);
+    const [langServer, setlangServer] = useState(false); // set to true to use server lang
 
     // Replace local lang with server lang
     useEffect(() => {
